@@ -92,7 +92,7 @@ class DashboardActivity : BaseActivity() {
     }
 
     override fun handleObservers() {
-        viewModel.financialYearResponse.observe(this, {
+        viewModel.financialYearResponse.observe(this) {
             it.result?.let { listFinancial ->
                 if (listFinancial.size > 0) {
                     listFinancial.forEach { item ->
@@ -104,15 +104,15 @@ class DashboardActivity : BaseActivity() {
                 loading(false)
                 yToast(getString(R.string.response_error), MessageStatus.ERROR)
             }
-        })
-        viewModel.userSmartDeviceResponse.observe(this, {
+        }
+        viewModel.userSmartDeviceResponse.observe(this) {
             if (this.lifecycle.currentState == Lifecycle.State.RESUMED) {
                 btnUser.loading(false)
                 callProfileMenu(it.result)
             }
-        })
+        }
 
-        viewModel.personnelResponse.observe(this, { result ->
+        viewModel.personnelResponse.observe(this) { result ->
             loading.isVisible = false
             if (result) {
                 gotoDashboard()
@@ -121,8 +121,8 @@ class DashboardActivity : BaseActivity() {
                 yToast(getString(R.string.error_personnel_information), MessageStatus.ERROR)
                 logout()
             }
-        })
-        viewModel.responseId.observe(this, {
+        }
+        viewModel.responseId.observe(this) {
             loading.isVisible = false
             if (it.result != 0L) {
                 ActionDialog.Builder()
@@ -133,7 +133,7 @@ class DashboardActivity : BaseActivity() {
                     .show(supportFragmentManager, ActionDialog.TAG)
             } else
                 failureOperation(it.message)
-        })
+        }
     }
 
     private fun callProfileMenu(list: List<UserSmartDeviceResponse.Result>?) {
@@ -213,37 +213,12 @@ class DashboardActivity : BaseActivity() {
             when (it) {
                 0 -> {
                     homeMenu = false
-                    replaceFragmentInActivity(
-                        R.id.container,
-                        ReportsDashboardFragment(),
-                        ReportsDashboardFragment.TAG
-                    )
+                   // register sale factor
                 }
 
-                1 -> {
+                2 -> {
                     homeMenu = false
-                    replaceFragmentInActivity(
-                        R.id.container,
-                        WarehouseHandlingDashboardFragment(),
-                        WarehouseHandlingDashboardFragment.TAG
-                    )
-                }
-
-                3 -> {
-                    homeMenu = false
-                    replaceFragmentInActivity(
-                        R.id.container,
-                        OperationDashboardFragment(),
-                        OperationDashboardFragment.TAG
-                    )
-                }
-                4 -> {
-                    homeMenu = false
-                    replaceFragmentInActivity(
-                        R.id.container,
-                        BaseInformationFragment(),
-                        BaseInformationFragment.TAG
-                    )
+                   // another menu
                 }
                 else -> {
                     gotoDashboard()

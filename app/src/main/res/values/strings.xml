@@ -152,6 +152,10 @@
     <string name="last_update_date">تاریخ آخرین بروزرسانی :</string>
     <string name="update">بروزرسانی</string>
     <string name="error_read_certificate">خواندن اطلاعات با خطا مواجه شد. از معتبر بودن فایل اطمینان حاصل فرمایید</string>
+    <string name="register_sale_factor">ثبت فاکتور فروش</string>
+    <string name="did_not_register_yet">ثبت نام نکرده اید؟</string>
+    <string name="register">ثبت نام</string>
+    <string name="error_certificate_file">فایل \'cer\' معتبر نیست، لطفا از قسمت ثبت نام جدد فایل را بارگذاری نمایید.</string>
 
 
 </resources>

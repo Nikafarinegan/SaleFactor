@@ -6,6 +6,7 @@ import android.os.Environment
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.IntentCompat
 import com.jaiselrahman.filepicker.activity.FilePickerActivity
 import com.jaiselrahman.filepicker.config.Configurations
 import com.jaiselrahman.filepicker.model.MediaFile
@@ -18,6 +19,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
+import kotlin.system.exitProcess
 
 
 class UploadActivity : AppCompatActivity() {
@@ -153,10 +155,11 @@ class UploadActivity : AppCompatActivity() {
 
     private fun readExcelFile(mediaFile: MediaFile) {
         try {
-            val inputStream = FileInputStream(excelFile)
-            val xlWb = WorkbookFactory.create(inputStream)
-            val xlWs = xlWb.getSheetAt(0)
-            yToast("data: ${xlWs.getRow(0).getCell(0)}", MessageStatus.INFORMATION)
+//            val inputStream = FileInputStream(excelFile)
+//            val xlWb = WorkbookFactory.create(inputStream)
+//            val xlWs = xlWb.getSheetAt(0)
+//            yToast("data: ${xlWs.getRow(0).getCell(0)}", MessageStatus.INFORMATION)
+            successOperation()
         } catch (e: Exception) {
             failureOperation(e.message)
         }
@@ -169,10 +172,10 @@ class UploadActivity : AppCompatActivity() {
             if (certFile.name.extension == "cer") {
                 if (targetFile.exists())
                     targetFile.delete()
-                File(certFile.path)?.let { sourceFile ->
+                File(certFile.path).let { sourceFile ->
                     sourceFile.copyTo(File(targetPath))
                 }
-                successOperation()
+              restart()
             } else
                 showError("فایل انتخابی معتبر نیست، لطفا فایل با پسوند 'cer.' انتخاب کنید")
         } catch (e: Exception) {
@@ -183,4 +186,12 @@ class UploadActivity : AppCompatActivity() {
 
     private val String.extension: String
         get() = substringAfterLast('.', "")
+
+    private fun restart() {
+        val mainIntent: Intent =
+            IntentCompat.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_LAUNCHER)
+        mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        applicationContext.startActivity(mainIntent)
+        exitProcess(0)
+    }
 }

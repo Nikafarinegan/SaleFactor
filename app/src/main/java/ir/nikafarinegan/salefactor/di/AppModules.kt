@@ -46,7 +46,7 @@ val viewModelModules = module {
 
 val networkModules = module {
     factory { ApiClient(get()).getInterface() }
-    factory { WebServiceGateway(get()) }
+    factory { WebServiceGateway(get(), get(), get()) }
     factory { RemoteRepository(get(), get(), get()) }
 }
 
@@ -55,15 +55,9 @@ val networkModules = module {
 val databaseModule = module {
 
     fun provideDatabase(application: Application): WarehouseDatabase {
-        /*val MIGRATION_2_3 = object : Migration(2, 3) {
-            override fun migrate(database: SupportSQLiteDatabase) {
-                database.execSQL("ALTER TABLE tbl_Document ADD COLUMN xDocumentType INTEGER")
-            }
-        }*/
         return Room.databaseBuilder(application, WarehouseDatabase::class.java, "Warehouse.db")
             .fallbackToDestructiveMigration()
             .allowMainThreadQueries()
-//            .addMigrations(MIGRATION_2_3)
             .build()
     }
 
