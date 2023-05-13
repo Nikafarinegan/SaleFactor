@@ -1,0 +1,59 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext{
+        kotlin_version = '1.7.21'
+        build_gradle='7.4.0'
+
+        core_version = '1.7.0'
+        appcompat_version = '1.4.1'
+        material_version = '1.6.0'
+        constraintlayout_version = '2.1.4'
+        module_version = "v1.0.0"
+
+        koin_version = "3.1.5"
+        retrofit_version = "2.9.0"
+        okhttp_version = "4.9.1"
+        gson_version = "2.8.9"
+        room_version = "2.4.2"
+        coroutines_version = "1.5.2"
+        fragment_version = "1.4.1"
+        lifecycle_version = "2.5.0-rc01"
+
+        glide_version = "4.13.0"
+        chart_version = "v3.1.0"
+        pdf_version = "2.8.2"
+        picker_version = "1.3.2"
+        scrollimage_version = "1.3.3"
+        yoyo_version = "2.4@aar"
+        bottombar_version = "2.2"
+        timeline_version = "1.1"
+    }
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url "https://maven.google.com" }
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:$build_gradle")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+        classpath("io.insert-koin:koin-gradle-plugin:$koin_version")
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url "https://maven.google.com" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

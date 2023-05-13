@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_center_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.49" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_center_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.51" />
+
+        <TextView
+            android:id="@+id/lblGoodsCode"
+            style="@style/LabelCaptionStyle"
+            android:text="@string/goods_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtGoodsCode"
+            style="@style/TextCaptionStyle"
+            android:layout_width="0dp"
+            android:layout_marginEnd="4dp"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toStartOf="@id/lblGoodsCode"
+            app:layout_constraintTop_toTopOf="@id/lblGoodsCode"/>
+
+        <TextView
+            android:id="@+id/lblDescription"
+            style="@style/LabelCaptionStyle"
+            android:text="@string/goods_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtGoodsCode"/>
+
+        <TextView
+            android:id="@+id/txtDescription"
+            style="@style/TextCaptionStyle"
+            android:layout_width="0dp"
+            android:layout_marginEnd="4dp"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lblDescription"
+            app:layout_constraintTop_toTopOf="@id/lblDescription"/>
+
+        <TextView
+            android:id="@+id/lblSerialNum"
+            style="@style/LabelCaptionStyle"
+            android:text="@string/serial_number1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtDescription" />
+
+        <TextView
+            android:id="@+id/txtSerialNum"
+            style="@style/TextCaptionStyle"
+            android:layout_width="0dp"
+            android:layout_marginEnd="4dp"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toStartOf="@id/lblSerialNum"
+            app:layout_constraintTop_toTopOf="@id/lblSerialNum"/>
+
+        <TextView
+            android:id="@+id/lblCount"
+            style="@style/LabelCaptionStyle"
+            android:text="@string/count"
+            app:layout_constraintEnd_toStartOf="@id/guideline_center_left"
+            app:layout_constraintTop_toBottomOf="@id/txtDescription" />
+
+        <TextView
+            android:id="@+id/txtCount"
+            style="@style/TextCaptionStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toStartOf="@id/lblCount"
+            app:layout_constraintTop_toTopOf="@id/lblCount"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCount">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey_500"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:tint="@color/red_400"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_delete" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

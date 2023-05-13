@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_reports"
+        android:enabled="true"
+        android:icon="@drawable/ic_report"
+        android:title="@string/reports"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_warehouse"
+        android:enabled="true"
+        android:icon="@drawable/ic_transport"
+        android:title="@string/warehouse_handling"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_dashboard"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_operation"
+        android:enabled="true"
+        android:icon="@drawable/ic_operation"
+        android:title="@string/operation"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_base_information"
+        android:enabled="true"
+        android:icon="@drawable/ic_information"
+        android:title="@string/base_information"
+        app:showAsAction="always" />
+
+</menu>

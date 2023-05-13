@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutSpecification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/onSurface"
+                android:padding="12dp">
+
+                <ir.awlrhm.modules.view.Spinner
+                    android:id="@+id/spWarehouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sp_hint="@string/choose"
+                    app:sp_title="@string/warehouse"
+                    app:sp_border="@drawable/border_grey"
+                    app:sp_titleColor="@color/colorPrimaryDark"
+                    app:sp_background="@color/onSurface"/>
+
+                <ir.awlrhm.modules.view.Spinner
+                    android:id="@+id/spDocumentType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/spWarehouse"
+                    app:sp_hint="@string/choose"
+                    app:sp_title="@string/document_type"
+                    app:sp_border="@drawable/border_grey"
+                    app:sp_titleColor="@color/colorPrimaryDark"
+                    app:sp_background="@color/onSurface"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ir.awlrhm.modules.view.RecyclerView
+        android:id="@+id/rclDocument"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

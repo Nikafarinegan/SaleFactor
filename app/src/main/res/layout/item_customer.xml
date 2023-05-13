@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_center_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.49" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_center_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.51" />
+
+        <TextView
+            android:id="@+id/lblCustomer"
+            style="@style/LabelCaptionStyle"
+            android:text="@string/customer_class"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtCustomer"
+            style="@style/TextCaptionStyle"
+            android:layout_width="0dp"
+            android:layout_marginEnd="4dp"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lblCustomer"
+            app:layout_constraintTop_toTopOf="@id/lblCustomer"/>
+
+        <TextView
+            android:id="@+id/lblCustomerTitle"
+            style="@style/LabelCaptionStyle"
+            android:text="@string/customer_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCustomer" />
+
+        <TextView
+            android:id="@+id/txtCustomerTitle"
+            style="@style/TextCaptionStyle"
+            android:layout_width="0dp"
+            android:layout_marginEnd="4dp"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lblCustomerTitle"
+            app:layout_constraintTop_toTopOf="@id/lblCustomerTitle"/>
+
+        <TextView
+            android:id="@+id/lblCustomerCode"
+            style="@style/LabelCaptionStyle"
+            android:text="@string/customer_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCustomerTitle"/>
+
+        <TextView
+            android:id="@+id/txtCustomerCode"
+            style="@style/TextCaptionStyle"
+            android:layout_width="0dp"
+            android:layout_marginEnd="4dp"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toEndOf="@id/guideline_center_right"
+            app:layout_constraintEnd_toStartOf="@id/lblCustomerCode"
+            app:layout_constraintTop_toTopOf="@id/lblCustomerCode"/>
+
+        <TextView
+            android:id="@+id/lblCustomerParentCode"
+            style="@style/LabelCaptionStyle"
+            android:text="@string/customer_parent_code"
+            android:layout_marginTop="0dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_center_left"
+            app:layout_constraintTop_toTopOf="@id/txtCustomerCode" />
+
+        <TextView
+            android:id="@+id/txtCustomerParentCode"
+            style="@style/TextCaptionStyle"
+            android:layout_width="0dp"
+            android:layout_marginEnd="4dp"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toStartOf="@id/lblCustomerParentCode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lblCustomerParentCode"/>
+
+        <TextView
+            android:id="@+id/lblRegisteredDate"
+            style="@style/LabelCaptionStyle"
+            android:text="@string/registered_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCustomerCode" />
+
+        <TextView
+            android:id="@+id/txtRegisteredDate"
+            style="@style/TextCaptionStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toStartOf="@id/lblRegisteredDate"
+            app:layout_constraintTop_toTopOf="@id/lblRegisteredDate"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

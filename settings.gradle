@@ -1,0 +1,3 @@
+rootProject.name='SaleFactor'
+include ':app'
+include ':areminder'

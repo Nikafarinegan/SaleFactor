@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <me.ibrahimsn.lib.NiceBottomBar
+        android:id="@+id/bnvDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:menu="@menu/menu_dashboard"
+        app:backgroundColor="@color/onSurface"
+        app:indicatorEnabled="true"
+        app:indicatorColor="@color/colorPrimaryDark"
+        app:indicatorWidth="50dp"
+        app:indicatorGravity="top"
+        app:itemFontFamily="@font/iran_sans_mobile"
+        app:textColor="@color/colorPrimary"
+        app:textColorActive="@color/colorPrimaryDark"
+        app:textSize="@dimen/textBottomBar"
+        app:iconSize="22dp"
+        app:iconMargin="2dp"
+        app:badgeColor="@color/red_500"
+        app:indicatorInterpolator="anticipateOvershoot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <include layout="@layout/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bnvDashboard"/>
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/loading"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

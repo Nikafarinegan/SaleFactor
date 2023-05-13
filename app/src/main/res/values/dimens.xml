@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textAppearanceHeadline1">96sp</dimen>
+    <dimen name="textAppearanceHeadline2">60sp</dimen>
+    <dimen name="textAppearanceHeadline3">48sp</dimen>
+    <dimen name="textAppearanceHeadline4">34sp</dimen>
+    <dimen name="textAppearanceHeadline5">24sp</dimen>
+    <dimen name="textAppearanceHeadline6">22sp</dimen>
+    <dimen name="textAppearanceHeadline7">20sp</dimen>
+    <dimen name="textAppearanceHeadline8">18sp</dimen>
+    <dimen name="textAppearanceSubtitle1">16sp</dimen>
+    <dimen name="textAppearanceSubtitle2">14sp</dimen>
+    <dimen name="textAppearanceBody1">16sp</dimen>
+    <dimen name="textAppearanceBody2">14sp</dimen>
+    <dimen name="textAppearanceCaption10">10sp</dimen>
+    <dimen name="textAppearanceCaption11">11sp</dimen>
+    <dimen name="textAppearanceCaption12">12sp</dimen>
+    <dimen name="textAppearanceButton">13sp</dimen>
+    <dimen name="textAppearanceOverLine">12sp</dimen>
+    <dimen name="textAppearanceSubData">10sp</dimen>
+
+
+    <dimen name="textBottomBar">8sp</dimen>
+    <dimen name="progress_menu">20dp</dimen>
+    <dimen name="progress">35dp</dimen>
+    <dimen name="icon">28dp</dimen>
+    <dimen name="menu_icon">1024dp</dimen>
+    <dimen name="guide_line">20dp</dimen>
+    <dimen name="guid_line">20dp</dimen>
+    <dimen name="profile_size">90dp</dimen>
+    <dimen name="profile_round_corner">45dp</dimen>
+</resources>

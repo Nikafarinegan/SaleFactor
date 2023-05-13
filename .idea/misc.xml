@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Nikafarinegan/Projects/Warehouse/App/WarehoseManagement/app/src/main/res/layout/fragment_add_sub_goods.xml" value="0.3265625" />
+        <entry key="..\:/Nikafarinegan/Projects/Warehouse/App/WarehoseManagement/app/src/main/res/layout/fragment_document.xml" value="0.3265625" />
+        <entry key="..\:/Nikafarinegan/Projects/Warehouse/App/WarehoseManagement/app/src/main/res/layout/fragment_no_connection.xml" value="0.3265625" />
+        <entry key="..\:/Nikafarinegan/Projects/Warehouse/App/WarehoseManagement/app/src/main/res/layout/fragment_register.xml" value="0.20833333333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
